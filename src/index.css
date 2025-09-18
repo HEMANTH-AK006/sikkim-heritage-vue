@@ -2,39 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Monastery360 Design System - Cultural Heritage & Spiritual Aesthetics
+All colors MUST be HSL. Warm earthy tones inspired by Himalayan monasteries.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - warm cream background */
+    --background: 45 15% 96%;
+    --foreground: 25 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card colors - soft warm white */
+    --card: 45 25% 98%;
+    --card-foreground: 25 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover colors */
+    --popover: 45 25% 98%;
+    --popover-foreground: 25 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - deep saffron/monastery orange */
+    --primary: 25 85% 45%;
+    --primary-foreground: 45 25% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - warm sage green */
+    --secondary: 95 25% 85%;
+    --secondary-foreground: 25 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - soft warm gray */
+    --muted: 45 12% 88%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - golden yellow */
+    --accent: 45 90% 70%;
+    --accent-foreground: 25 20% 15%;
 
+    /* Destructive remains similar */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 45 25% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs - warm neutral */
+    --border: 45 20% 85%;
+    --input: 45 20% 90%;
+    --ring: 25 85% 45%;
+
+    /* Custom spiritual/cultural colors */
+    --monastery-orange: 25 85% 45%;
+    --monastery-gold: 45 90% 70%;
+    --monastery-brown: 25 35% 25%;
+    --monastery-sage: 95 25% 65%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 85% 45% / 0.9), hsl(25 60% 30% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(45 25% 98%), hsl(45 15% 94%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 90% 70%), hsl(25 85% 45%));
+
+    /* Shadows with warm tones */
+    --shadow-warm: 0 4px 20px hsl(25 85% 45% / 0.15);
+    --shadow-soft: 0 2px 10px hsl(25 20% 15% / 0.08);
 
     --radius: 0.5rem;
 
@@ -56,33 +80,49 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode - deep monastery night tones */
+    --background: 25 15% 8%;
+    --foreground: 45 25% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 20% 12%;
+    --card-foreground: 45 25% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 20% 12%;
+    --popover-foreground: 45 25% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 25 85% 55%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 45 25% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 45 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 85% 60%;
+    --accent-foreground: 25 15% 8%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 45 25% 92%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 25 85% 55%;
+
+    /* Dark mode custom colors */
+    --monastery-orange: 25 85% 55%;
+    --monastery-gold: 45 85% 60%;
+    --monastery-brown: 25 25% 15%;
+    --monastery-sage: 95 20% 40%;
+
+    /* Dark gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 85% 55% / 0.8), hsl(25 40% 20% / 0.9));
+    --gradient-card: linear-gradient(145deg, hsl(25 20% 12%), hsl(25 15% 10%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 85% 60%), hsl(25 85% 55%));
+
+    /* Dark shadows */
+    --shadow-warm: 0 4px 20px hsl(25 85% 15% / 0.3);
+    --shadow-soft: 0 2px 10px hsl(25 40% 5% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +141,72 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Custom component classes */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60;
+  }
+
+  .monastery-card {
+    @apply bg-gradient-to-br from-card to-card/90 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .monastery-button {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300;
+  }
+
+  .spiritual-text {
+    @apply text-foreground/80 leading-relaxed;
+  }
+
+  .page-transition {
+    @apply animate-fade-in;
+  }
+
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
